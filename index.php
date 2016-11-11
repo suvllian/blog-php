@@ -1,5 +1,6 @@
 <?php
 	include_once('./C/ConnectClient.php');
+	include_once('./V/Page.php');
 	$Worker = new ConnectClient();
 	$sql = 'select * from pages';
 	$res = $Worker->query($sql);
@@ -38,15 +39,25 @@
 		if($link==NULL||$link=="index"){
 			require("V/main.php");
 		}elseif($link=="windows"){
-			require("V/windows.php");
+			$windows = new Page('Windows');
+			$windows->getHead();
+			$windows->getData();
 		}elseif($link=="js"){
-			require("V/js.php");
+			$js = new Page('前端开发');
+			$js->getHead();
+			$js->getData();
 		}elseif($link=="websec"){
-			require("V/websec.php");
+			$websec = new Page('Web安全');
+			$websec->getHead();
+			$websec->getData();
 		}elseif($link=="handle"){
-			require("V/handle.php");
+			$handle = new Page('后端开发');
+			$handle->getHead();
+			$handle->getData();
 		}elseif($link=="life"){
-			require("V/life.php");
+			$life = new Page('生活');
+			$life->getHead();
+			$life->getData();
 		}else{
 			require("V/main.php");
 		}
