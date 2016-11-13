@@ -1,9 +1,14 @@
 <?php
 	include_once('./C/ConnectClient.php');
-
+	include_once('./C/Page.php');
 	$Worker = new ConnectClient();
-	$sql = 'select bClass,bTime,bName,bTopic,bImage from books';
-	$res = $Worker->query($sql);
+
+	$pageNow = @$_GET['pageNow'];
+	if (!$pageNow) {
+		$pageNow = 1;
+	}
+	$page = new Paging($pageNow,16,"books","order by bId desc","bClass,bTime,bName,bTopic,bImage");
+	$res = $page->getArrayList();
 	$length = count($res);
 ?>
 
@@ -70,6 +75,10 @@
 
 	<?php } ?>
 	</div>
+
+	<?php
+		echo $page->getPageHTML("books.php","","");
+	?>
 </section>
 <!-- Section End -->
 

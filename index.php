@@ -1,10 +1,18 @@
 <?php
 	include_once('./C/ConnectClient.php');
 	include_once('./V/Page.php');
+	include_once('./C/Page.php');
 	$Worker = new ConnectClient();
 	$sql = 'select * from pages';
 	$res = $Worker->query($sql);
 	$length = count($res);
+
+
+	$pageNow = @$_GET['pageNow'];
+	if (!$pageNow) {
+		$pageNow = 1;
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +46,7 @@
 		$link = @$_GET["topic"];
 		if($link==NULL||$link=="index"){
 			require("V/main.php");
+			echo $page->getPageHTML("index.php","","&topic=index");
 		}elseif($link=="windows"){
 			$windows = new Page('Windows');
 			$windows->getHead();
