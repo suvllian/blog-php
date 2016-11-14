@@ -28,6 +28,8 @@ window.onload = function(){
 	var i = 0;
 	console.log(length);
 
+	setTimeout(animateDelay(h1),0);
+
 	var handle = setInterval(function(){
 		node = animate[i];
 		top = -10;
@@ -44,13 +46,13 @@ window.onload = function(){
 				top = top + 1;
 			}	
 			node.style.top = top+"px";
-		},150);
+		},120);
 		i++;
 	},500);
 
 	setTimeout(function(){
 		clearInterval(handle);
-	},4000);
+	},4500);
 
 	setTimeout(function(){
 		var top = 10;
@@ -63,7 +65,7 @@ window.onload = function(){
 		},200);
 
 		var handleTop = setInterval(function(){
-			if(top>0){
+			if(top>-4){
 				top = top - 1;
 			}	
 			(location[0]).style.top = top+"px";

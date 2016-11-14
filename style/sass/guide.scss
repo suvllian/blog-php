@@ -12,14 +12,17 @@ body {
     width: 960px;
 
     .slidebar{
+	    margin: 0 auto;
+	    max-width: 500px;
+
     	.animate-init {
 		    position: relative;
 		    top: -10px;
 		    opacity: 0;
 		}
 
-
     	.header{
+
     		 h1 {
 			    opacity: 0;
 			    position: relative;
@@ -58,6 +61,10 @@ body {
 			    margin: 40px 0;
 			    position: relative;
 			    text-align: center;
+			}
+
+			.quote-author{
+				text-align:right;
 			}
     	}
 
