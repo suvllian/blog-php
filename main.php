@@ -46,7 +46,7 @@
 		$link = @$_GET["topic"];
 		if($link==NULL||$link=="index"){
 			require("V/main.php");
-			echo $page->getPageHTML("index.php","","&topic=index");
+			echo $page->getPageHTML("main.php","","&topic=index");
 		}elseif($link=="windows"){
 			$windows = new Page('Windows');
 			$windows->getHead();
