@@ -62,6 +62,7 @@ footer{
 }
 
 .topblock{
+	box-sizing:border-box;
 	line-height:2em;
 	padding-left:3.2%;
 	padding-top:0.6em;
@@ -86,6 +87,21 @@ footer{
 	margin-bottom:2em;
 }
 
+.page{
+	height:4em;
+	padding:1.2em;
+	margin-top:1.2em;
+
+	span{
+		font-size:1.32em;
+		font-family: "Lato",Calibri,Arial,sans-serif;
+		font-weight:500;
+		margin:0 5px;
+	}
+}
+
+
+
 @media screen and	(max-width:1000px){
 	.navbar{
 		width:100%;
@@ -106,5 +122,14 @@ footer{
 
 	.topblock{
 		border-top:1px solid #eee;
+	}
+
+	.page{
+		span{
+			font-size:1em;
+			font-family: "Lato",Calibri,Arial,sans-serif;
+			font-weight:300;
+			margin:0 1px;
+		}
 	}
 }
