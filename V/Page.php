@@ -23,11 +23,9 @@ class Page
 	public function getData(){
 		$sql = 'select * from pages where pTopic="'.$this->topic.'" order by pId desc';
 		$Worker = new ConnectClient();
-		$res = $Worker->query($sql);
-		$length = count($res);	
-
-		for($i=0;$i<$length;$i++){
-			$string ="<a href=\"page.php?id=".$res[$i][0]."\"><article class=\"col-md-6\"><div class=\"thumbnail noborder\"><img src=\"".$res[$i][4]."\"></div><div class=\"caption\"><span class=\"topic\">".$res[$i][1] ."</span><span class=\"time\">".$res[$i][2]."</span><h3 class=\"title\">".$res[$i][3]."</h3><p class=\"content\">".$res[$i][5]."</p></div></article></a>";	
+		$pageResult = $Worker->query($sql);
+		foreach ($pageResult as $key=>$val){
+			$string ="<a href=\"page.php?id=".$val["pId"]."\"><article class=\"col-md-6\"><div class=\"thumbnail noborder\"><img src=\"".$val["pImage"]."\"></div><div class=\"caption\"><span class=\"topic\">".$val["pTopic"] ."</span><span class=\"time\">".$val["pTime"]."</span><h3 class=\"title\">".$val["pTitle"]."</h3><p class=\"content\">".$val["pShort"]."</p></div></article></a>";	
 			$this->content = $this->content.$string;	
 		}		
 		

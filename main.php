@@ -2,12 +2,7 @@
 	include_once('./C/ConnectClient.php');
 	include_once('./V/Page.php');
 	include_once('./C/Page.php');
-	$Worker = new ConnectClient();
-	$sql = 'select * from pages';
-	$res = $Worker->query($sql);
-	$length = count($res);
-
-
+	
 	$pageNow = @$_GET['pageNow'];
 	if (!$pageNow) {
 		$pageNow = 1;
@@ -21,6 +16,7 @@
 	<title>瓦尔登湖畔一棵松</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>

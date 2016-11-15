@@ -37,9 +37,9 @@ class Paging
 	private function setPageCount()
 	{
 		$sql = "SELECT COUNT(*) FROM ".$this->tableName;
-		$dataCount = $this->sqlHelper->query($sql);
-		$this->dataCount = $dataCount;
-		$this->pageCount = ceil($dataCount[0][0] / $this->pageSize);
+		$dataCount = $this->sqlHelper->numRows($sql);
+		$this->dataCount = $dataCount["COUNT(*)"];
+		$this->pageCount = ceil($this->dataCount / $this->pageSize);
 	}
 
 	//设置每一页中显示的数据

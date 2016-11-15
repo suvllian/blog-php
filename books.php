@@ -7,9 +7,8 @@
 	if (!$pageNow) {
 		$pageNow = 1;
 	}
-	$page = new Paging($pageNow,16,"books","order by bId desc","bClass,bTime,bName,bTopic,bImage");
+	$page = new Paging($pageNow,16,"books","order by bId","bClass,bTime,bName,bTopic,bImage");
 	$res = $page->getArrayList();
-	$length = count($res);
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +20,8 @@
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/books.css">
 	<link rel="stylesheet" type="text/css" href="style/stylesheets/commen.css">
+	<link rel="stylesheet" type="text/css" href="style/stylesheets/books.css">
 	<link rel="Bookmark" href="favicon.ico" />
 	<link rel="Shortcut Icon" href="favicon.ico" />
 </head>
@@ -39,28 +38,28 @@
 	<div class="row">
 		<div class="top">
 			<div class="row topblock pagetopic">
-				<p>主页</p>
+				<p>书单</p>
 			</div>
 			<div class="row topblock ">
 				<p><img src="images/class.png" class="text-left"><span>2016</span></p>
 			</div>
 		</div>
 	<?php
-		for($i=0;$i<$length;$i++){
+		foreach ($res as $key=>$val){
 	?>
 
 		<a href="">
 			<article class="col-md-3">
 				<div class="thumbnail noborder">
-					<img src="images/books/<?php echo $res[$i][4] ?>.jpg">
+					<img src="images/books/<?php echo $val["bImage"] ?>.jpg">
 				</div>
 				<div class="caption">
-					<span class="topic"><?php echo $res[$i][0] ?></span>
-					<span class="time"><?php echo $res[$i][1] ?></span>
-					<h3 class="title"><?php echo $res[$i][2] ?></h3>
+					<span class="topic"><?php echo $val["bClass"] ?></span>
+					<span class="time"><?php echo $val["bTime"] ?></span>
+					<h3 class="title"><?php echo $val["bName"] ?></h3>
 					<p class="content">
 					<?php 
-						$content = $res[$i][3];
+						$content = $val["bTopic"];
 						$strLen = strlen($content) ;
 						if($strLen>112){
 							$str = substr($content,0,112);

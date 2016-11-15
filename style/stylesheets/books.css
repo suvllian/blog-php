@@ -1,1 +1,78 @@
-article .thumbnail{margin-bottom:10px;border:0}article .thumbnail>img{border:1px solid #eee;border-radius:3px}article .topic{color:#62bbc3}article .time{margin-left:6px;color:#bbb}article .title{color:#444}article .content{color:#aaa;font-size:16px;line-height:1.6em;overflow:hidden}@media screen and (max-width: 1000px){article{width:45%;float:left;margin:12px 2.5% 0 2.5%;padding-top:8px;border:1px solid #eee;border-radius:5px}article .thumbnail>img{border:0px}table{width:100%;margin:0;margin-top:-1.46em}footer{height:7.2em;background:#33363b none repeat scroll 0 0;color:#aaa;padding-top:2.12em}.content{font-size:14px;line-height:1.4em}.title{font-size:1.02em}}
+/* line 1, ../sass/books.scss */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 7, ../sass/books.scss */
+article .thumbnail {
+  margin-bottom: 10px;
+  border: 0;
+}
+/* line 11, ../sass/books.scss */
+article .thumbnail > img {
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+/* line 17, ../sass/books.scss */
+article .topic {
+  color: #62bbc3;
+}
+/* line 21, ../sass/books.scss */
+article .time {
+  margin-left: 6px;
+  color: #bbb;
+}
+/* line 26, ../sass/books.scss */
+article .title {
+  color: #444;
+}
+/* line 30, ../sass/books.scss */
+article .content {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.6em;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 39, ../sass/books.scss */
+  article {
+    width: 45%;
+    float: left;
+    margin: 12px 2.5% 0 2.5%;
+    padding-top: 8px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  /* line 48, ../sass/books.scss */
+  article .thumbnail > img {
+    border: 0px;
+  }
+
+  /* line 54, ../sass/books.scss */
+  table {
+    width: 100%;
+    margin: 0;
+    margin-top: -1.46em;
+  }
+
+  /* line 60, ../sass/books.scss */
+  footer {
+    height: 7.2em;
+    background: #33363b none repeat scroll 0 0;
+    color: #aaa;
+    padding-top: 2.12em;
+  }
+
+  /* line 67, ../sass/books.scss */
+  .content {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  /* line 72, ../sass/books.scss */
+  .title {
+    font-size: 1.02em;
+  }
+}

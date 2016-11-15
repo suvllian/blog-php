@@ -11,8 +11,12 @@ class ConnectClient
 	{
 		if($result = $this->HookUp->query($sql))
 		{
-			$row = $result->fetch_all(MYSQLI_NUM);
-			return $row;
+			//$row = $result->fetch_all(MYSQLI_NUM);
+	        $rows = array();
+	        while ($rs = $result->fetch_assoc()){
+	            $rows[] = $rs;
+	        }
+			return $rows;
 		}
 		else
 		{
@@ -21,6 +25,13 @@ class ConnectClient
 		}
 		$result->close();
 	}
+	//统计查询记录数
+    public function numRows($sql){
+        $result = $this->HookUp->query($sql);
+        $rs = $result->fetch_assoc();
+        return $rs;
+    }
+
 	public function IDAsql($sql)
 	{
 		if($result = $this->HookUp->query($sql))

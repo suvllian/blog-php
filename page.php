@@ -4,13 +4,15 @@
 	$id = $_GET['id'];
 	$sql = "select * from pages where pId=$id";
 	$res = $Worker->query($sql);
+	foreach ($res as $key=>$val){
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $res[0][3] ?></title>
+	<title><?php echo $val["pTitle"] ?></title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -35,21 +37,21 @@
 		<div class="col-md-8">
 			<div class="top">
 				<div class="row topblock pagetopic">
-					<p><?php echo $res[0][1] ?></p>
+					<p><?php echo $val["pTitle"] ?></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="title">
-					<p><?php echo $res[0][3] ?></p>
+					<p><?php echo $val["pTitle"] ?></p>
 				</div>
 				<div class="time">
-					<p>作者：Suvllian&nbsp;&nbsp;发表于：<?php echo $res[0][2] ?></p>
+					<p>作者：Suvllian&nbsp;&nbsp;发表于：<?php echo $val["pTime"] ?></p>
 				</div>
 				<div class="thumbnail noborder">
-					<img src="<?php echo $res[0][4] ?>">
+					<img src="<?php echo $val["pImage"] ?>">
 				</div>
 				<div class="main">
-					<?php echo $res[0][6] ?>
+					<?php echo $val["pContent"] ?>
 				</div>
 			</div>
 		</div>
@@ -60,7 +62,7 @@
 	</div>
 </section>
 <!-- Section End -->
-
+<?php  } ?>
 <!-- Footer Begin -->
 <footer>
 	<p class="text-center">Copyright © 2016 .瓦尔登湖畔一棵松 All rights reserved.备案号：陕IPC备16014072号</p>
