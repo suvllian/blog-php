@@ -7,7 +7,6 @@
 	if (!$pageNow) {
 		$pageNow = 1;
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -22,37 +21,11 @@
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style/stylesheets/index.css">
 	<link rel="stylesheet" type="text/css" href="style/stylesheets/commen.css">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/guide.css">
 	<link rel="Bookmark" href="favicon.ico" />
 	<link rel="Shortcut Icon" href="favicon.ico" />
 </head>
 <body>
-<div id="guide">
-	<div id="content" class="guidecontent">
-		<div class="slidebar">
-			<div class="header">
-				<h1>Suvllian</h1>
-				<div class="quote">
-					<p class="animate-init">不积跬步，无以至千里。不积小流，无以成江海。</p>
-					<p class="animate-init quote-author">《劝学篇》——<strong>荀子</strong></p>
-				</div>
-			</div>	
-			<div class="menu">
-				<a class="animate-init" href="https://github.com/suvllian">GitHub</a>
-				<a class="animate-init" href="https://www.douban.com/people/132150045/">DouBan</a>
-				<a class="animate-init" href="http://weibo.com/5377632866/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1">WeiBo</a>
-				<a class="animate-init" href="https://www.zhihu.com/people/song-qing-song-73">ZhiHu</a>
 
-				<p id="toMain"><a  class="animate-init" href="#">瓦尔登湖畔一棵松</a></p>
-			</div>
-			<div class="location">
-				<i class="location-icon"></i>
-				<span class="location-text animate-init">Xi'an - China</span>
-				<span class="animate-init"></span>
-			</div>
-		</div>
-	</div>
-</div>
 <?php
 	include_once('header.php');
 ?>
@@ -69,7 +42,7 @@
 		$link = @$_GET["topic"];
 		if($link==NULL||$link=="index"){
 			require("V/main.php");
-			echo $page->getPageHTML("index.php","","&topic=index");
+			echo $page->getPageHTML("main.php","","&topic=index");
 		}elseif($link=="windows"){
 			$windows = new Page('Windows');
 			$windows->getHead();
@@ -119,7 +92,7 @@
 			</div>
 
 			<div class="rows">
-				<a href="#"><h3>在路上</h3></a>
+				<!-- <a href="#"><h3>在路上</h3></a>
 				<a href="#"><div class="col-md-12">
 					<div class="thumbnail">
 						<img src="images/guanxiang.jpg">
@@ -130,7 +103,7 @@
 					<div class="thumbnail">
 						<img src="images/beijing.jpg">
 					</div>
-				</div></a>
+				</div></a> -->
 			</div>
 
 		</div>
@@ -144,7 +117,6 @@
 </footer>
 <!-- Footer End -->
 </body>
-<script type="text/javascript" src="js/guide.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>

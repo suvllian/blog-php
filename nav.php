@@ -9,12 +9,12 @@
   </div>
   <div class="collapse navbar-collapse navbar-responsive-collapse">
     	<ul class="nav navbar-nav">
-      		<li><a href="index.php?topic=index">首页</a></li>
-      		<li><a href="index.php?topic=windows">Windows</a></li>
-      		<li><a href="index.php?topic=js">前端开发</a></li>
-      		<li><a href="index.php?topic=websec">Web安全</a></li>
-      		<li><a href="index.php?topic=handle">后端开发</a></li>
-          <li><a href="index.php?topic=life">生活</a></li>
+      		<li><a href="main.php?topic=index">首页</a></li>
+      		<li><a href="main.php?topic=windows">Windows</a></li>
+      		<li><a href="main.php?topic=js">前端开发</a></li>
+      		<li><a href="main.php?topic=websec">Web安全</a></li>
+      		<li><a href="main.php?topic=handle">后端开发</a></li>
+          <li><a href="main.php?topic=life">生活</a></li>
       		<li><a href="books.php">书单</a></li>
 	 	</ul>
   </div>
