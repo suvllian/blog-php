@@ -25,10 +25,10 @@ class Page
 		$Worker = new ConnectClient();
 		$pageResult = $Worker->query($sql);
 		foreach ($pageResult as $key=>$val){
-			$string ="<a href=\"page.php?id=".$val["pId"]."\"><article class=\"col-md-6\"><div class=\"thumbnail noborder\"><img src=\"".$val["pImage"]."\"></div><div class=\"caption\"><span class=\"topic\">".$val["pTopic"] ."</span><span class=\"time\">".$val["pTime"]."</span><h3 class=\"title\">".$val["pTitle"]."</h3><p class=\"content\">".$val["pShort"]."</p></div></article></a>";	
+			$string ="<a href=\"article.php?id=".$val["pId"]."\"><article class=\"col-md-6\"><div class=\"thumbnail noborder\"><img src=\"".$val["pImage"]."\"></div><div class=\"caption\"><span class=\"topic\">".$val["pTopic"] ."</span><span class=\"time\">".$val["pTime"]."</span><h3 class=\"title\">".$val["pTitle"]."</h3><p class=\"content\">".$val["pShort"]."</p></div></article></a>";	
 			$this->content = $this->content.$string;	
 		}		
 		
-		echo "<div class=\"row\">".$this->content."</div>";
+		echo "<div class=\"row\">".$this->content."</div><style>#guide{display:none;}</style>";
 	}
 }

@@ -15,7 +15,7 @@
 	<?php
 		foreach ($res as $key=>$val){
 	?>
-	<a href="page.php?id=<?php echo $val["pId"] ?>">
+	<a href="article.php?id=<?php echo $val["pId"] ?>">
 		<article class="col-md-6">
 			<div class="thumbnail noborder">
 				<img src="<?php echo $val["pImage"] ?>">

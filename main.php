@@ -27,13 +27,13 @@
 <body>
 
 <?php
-	include_once('header.php');
+	include_once('./V/header.php');
 ?>
 
 <!-- Section Begin -->
 <section  class="container">
 	<?php
-		include_once('nav.php');
+		include_once('./V/nav.php');
 	?>
 	<div class="row">
 		<div class="col-md-8">
