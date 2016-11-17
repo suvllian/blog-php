@@ -16,9 +16,9 @@
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./style/stylesheets/index.css">
-	<link rel="stylesheet" type="text/css" href="./style/stylesheets/commen.css">
-	<link rel="stylesheet" type="text/css" href="./style/stylesheets/page.css">
+	<link rel="stylesheet" type="text/css" href="./V/style/stylesheets/index.css">
+	<link rel="stylesheet" type="text/css" href="./V/style/stylesheets/commen.css">
+	<link rel="stylesheet" type="text/css" href="./V/style/stylesheets/page.css">
 	<link rel="Bookmark" href="favicon.ico" />
 	<link rel="Shortcut Icon" href="favicon.ico" />
 </head>
@@ -48,7 +48,7 @@
 					<p>作者：Suvllian&nbsp;&nbsp;发表于：<?php echo $val["pTime"] ?></p>
 				</div>
 				<div class="thumbnail noborder">
-					<img src="./../<?php echo $val["pImage"] ?>">
+					<img src="<?php echo $val["pImage"] ?>">
 				</div>
 				<div class="main">
 					<?php echo $val["pContent"] ?>
@@ -57,7 +57,41 @@
 		</div>
 
 		<div class="col-md-4 right">
+			<div class="link">
+				<p class="text-center">聊点其他的</p>
+			</div>
+			<div class="rows thumbnail">
+				<img src="./V/images/leftTop.jpg">
+			</div>
 
+			<div class="rows">
+				<a href="books.php"><h3>书单</h3></a>
+				<a href="books.php"><div class="col-md-6">
+					<div class="thumbnail">
+						<img src="./V/images/books/yiju.jpg">
+					</div>
+				</div></a>
+				<a href="books.php"><div class="col-md-6">
+					<div class="thumbnail">
+						<img src="./V/images/books/santi.jpg">
+					</div>
+				</div></a>
+			</div>
+
+			<div class="rows">
+				<!-- <a href="#"><h3>在路上</h3></a>
+				<a href="#"><div class="col-md-12">
+					<div class="thumbnail">
+						<img src="images/guanxiang.jpg">
+					</div>
+				</div></a>
+
+				<a href="#"><div class="col-md-12">
+					<div class="thumbnail">
+						<img src="images/beijing.jpg">
+					</div>
+				</div></a> -->
+			</div>
 		</div>
 	</div>
 </section>
@@ -69,6 +103,6 @@
 </footer>
 <!-- Footer End -->
 </body>
-<script type="text/javascript" src="./js/jquery-3.1.0.js"></script>
-<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./V/js/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="./V/js/index.js"></script>
 </html>

@@ -20,8 +20,8 @@
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/commen.css">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/books.css">
+	<link rel="stylesheet" type="text/css" href="./V/style/stylesheets/commen.css">
+	<link rel="stylesheet" type="text/css" href="./V/style/stylesheets/books.css">
 	<link rel="Bookmark" href="favicon.ico" />
 	<link rel="Shortcut Icon" href="favicon.ico" />
 </head>
@@ -41,7 +41,7 @@
 				<p>书单</p>
 			</div>
 			<div class="row topblock ">
-				<p><img src="images/class.png" class="text-left"><span>2016</span></p>
+				<p><img src="./V/images/class.png" class="text-left"><span>2016</span></p>
 			</div>
 		</div>
 	<?php
@@ -51,7 +51,7 @@
 		<a href="">
 			<article class="col-md-3">
 				<div class="thumbnail noborder">
-					<img src="images/books/<?php echo $val["bImage"] ?>.jpg">
+					<img src="./V/images/books/<?php echo $val["bImage"] ?>.jpg">
 				</div>
 				<div class="caption">
 					<span class="topic"><?php echo $val["bClass"] ?></span>
@@ -87,6 +87,6 @@
 </footer>
 <!-- Footer End -->
 </body>
-<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="./V/js/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="./V/js/index.js"></script>
 </html>
