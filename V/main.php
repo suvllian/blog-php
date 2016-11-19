@@ -7,7 +7,7 @@
 		<p>主页</p>
 	</div>
 	<div class="row topblock ">
-		<p><img src="images/class.png" class="text-left"><span>2016</span></p>
+		<p><img src="./V/images/class.png" class="text-left"><span>2016</span></p>
 	</div>
 </div>
 
@@ -19,6 +19,10 @@
 		<article class="col-md-6">
 			<div class="thumbnail noborder">
 				<img src="<?php echo $val["pImage"] ?>">
+				<div class="image-content">
+					<h3>Passion Suvllian</h3>
+					<p><?php echo $val["pTitle"] ?></p>
+				</div>
 			</div>
 			<div class="caption">
 				<span class="topic"><?php echo $val["pTopic"] ?></span>

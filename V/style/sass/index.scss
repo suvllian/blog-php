@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 article{
 	.thumbnail{
 		margin-bottom:10px;
@@ -25,23 +27,60 @@ article{
 	}
 
 	.noborder{
-		transition: all 0.8s ease;
-	}
-}
+		background-color:#fff;
 
-article:hover{
-	.noborder{
-		opacity:0.6;
+		img{
+			@include transition(all 0.62s);
+		}
+
+		.image-content{
+			height:auto;
+			width:100%;
+			position:absolute;
+			top:0;
+			left:0;
+
+			p,h3{
+				text-align:center;
+				color:#333;
+			}
+
+			h3{
+				padding-top:48px;
+				margin:0;
+				font-size:32px;	
+				@include transition(all 0.62s);
+			}
+
+			p{
+				font-size:18px;
+				opacity:0;
+				@include transform(translateY(-20px));
+				@include transition(all 0.62s);
+			}
+		}
 	}
 
-	.title{
-		color:#62bbc3;
+	&:hover{
+		.noborder{
+			h3{
+				@include transform(translateY(-20px));
+			}
+
+			p{
+				opacity:1;
+				@include transform(translateY(0px));
+			}
+
+			img{
+				@include transform(scale3d(1.05,1.05,1));
+			}
+		}	
 	}
 }
 
 
 /*right begin*/
-
 .right{
 	padding:1%;
 	margin:0;
@@ -95,7 +134,6 @@ article:hover{
 	}
 
 	/*right begin*/
-
 	.right{
 		padding:0;
 		padding-top:2em;
