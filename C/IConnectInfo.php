@@ -4,7 +4,7 @@ interface IConnectInfo
 	const Host     = "localhost";
 	const UserName = "root";
 	const Password = "";
-	const DBName   = "blog";
+	const DBName   = "suvllian";
 	
 	public function doConnect();
 }
